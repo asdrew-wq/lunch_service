@@ -1,0 +1,28 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Django
+*.log
+*.sqlite3
+
+# PyCharm
+.idea/
+*.iml
+
+# Docker
+*.dockerignore
+Dockerfile.local
+
+# macOS
+.DS_Store
+
+# Інше
+*.bak
+*.swp
