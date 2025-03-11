@@ -1,6 +1,6 @@
 # Lunch Service
 
-Lunch Service — це API для вибору закладу харчуваеея із підтримкою версіонування (v1.0 та v2.0). Проєкт побудований на Django та Django REST Framework, використовує PostgreSQL як базу даних і розгортається через Docker Compose.
+Lunch Service — це API для вибору закладу харчування із підтримкою версіонування (v1.0 та v2.0). Проєкт побудований на Django та Django REST Framework, використовує PostgreSQL як базу даних і розгортається через Docker Compose.
 
 ## Вимоги
 
@@ -117,18 +117,18 @@ curl http://localhost:8000/api/menus/
 
 ### 6. Запуск тестів
 Перевірте функціональність:
-```
+```bash
 docker-compose exec app pytest -s
 ```
 
 ### 7. Зупинка системи
 Зупиніть контейнери:
-```
+```bash
 docker-compose down
 ```
 
 Для видалення даних бази:
-```
+```bash
 docker-compose down -v
 ```
 
@@ -161,7 +161,7 @@ docker-compose down -v
 `X-Build-Version: 1.0` або `2.0`
 
 Тіло для v1.0:
-```
+```json
 {
   "restaurant_id": 1,
   "items": "{\"main\": \"Pizza Margherita\"}"
@@ -169,7 +169,7 @@ docker-compose down -v
 ```
 
 Тіло для v2.0:
-```
+```json
 {
   "restaurant_id": 1,
   "content": "{\"main\": \"Pizza Margherita\"}"
@@ -177,7 +177,7 @@ docker-compose down -v
 ```
 
 Відповідь (v1.0):
-```
+```json
 {
   "id": 1,
   "restaurant": {"id": 1, "name": "Restaurant 1"},
@@ -187,7 +187,7 @@ docker-compose down -v
 ```
 
 Відповідь (v2.0):
-```
+```json
 {
   "id": 1,
   "restaurant": {"id": 1, "name": "Restaurant 1"},
@@ -204,17 +204,17 @@ docker-compose down -v
 
 ### Розробка
 - Оновіть `requirements.txt` і перебудуйте:
-```
+```bash
 docker-compose build
 ```
 
 - Доступ до shell:
-```
+```bash
 docker-compose exec app bash
 ```
 
 - Створення суперкористувача:
-```
+```bash
 docker-compose exec app python manage.py createsuperuser
 ```
 
