@@ -42,10 +42,9 @@ sqlparse==0.5.3
 Склонуйте репозиторій на свій локальний комп’ютер:
 
 ```bash
-git clone https://github.com/yourusername/lunch_service.git
+git clone https://github.com/asdrew-wq/lunch_service.git
 cd lunch_service
 ```
-Замініть yourusername на свій GitHub-нікнейм.
 
 ### 2. Налаштування оточення
 Створіть файл .env у кореневій директорії проєкту з такими змінними:
